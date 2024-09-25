@@ -1,0 +1,9 @@
+export { default as gallery1 } from './gallery1.webp';
+export { default as gallery2 } from './gallery2.webp';
+export { default as gallery3 } from './gallery3.webp';
+export { default as gallery4 } from './gallery4.webp';
+export { default as gallery5 } from './gallery5.webp';
+export { default as gallery6 } from './gallery6.webp';
+export { default as gallery7 } from './gallery7.webp';
+export { default as gallery8 } from './gallery8.webp';
+export { default as gallery9 } from './gallery9.webp';

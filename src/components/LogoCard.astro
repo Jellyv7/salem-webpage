@@ -1,10 +1,11 @@
 ---
-import { SalemLetras } from "@icons";
+const { cardTitle, subtitle } = Astro.props;
 ---
 
 <div class="salem__banner">
 	<div>
-		<SalemLetras />
+		<h1>{ cardTitle }</h1>
+		<h3>{ subtitle }</h3>
 	</div>
 </div>
 
@@ -28,7 +29,19 @@ import { SalemLetras } from "@icons";
 		opacity: 0.5;
 	}
 
-	.salem__banner > div {
-		width: 25em;
+	.salem__banner > div > h1 {
+		font-family: 'Greater Theory';
+		font-size: 6.5rem;
+		text-transform: uppercase;
+		text-align: center;
+		color: var(--dark);
+	}
+
+	.salem__banner > div > h3 {
+		text-align: center;
+		font-size: 1.2rem;
+		text-transform: uppercase;
+		font-family: 'Swiss Light';
+		letter-spacing: 2px;
 	}
 </style>
