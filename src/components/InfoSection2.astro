@@ -11,9 +11,11 @@ import HomePhoto from "../assets/HomePhoto.webp";
 		<div class="title">
 			<span>Somos tu distribuidora de confianza</span>
 		</div>
-		<div class="budget__button">
-			<span> Presupuesto </span>
-		</div>
+		<a href="https://wa.link/f7e7l4" target="_blank">
+			<div class="budget__button">
+				<span> Presupuesto </span>
+			</div>
+		</a>
 		<div class="polygon"></div>
 	</div>
 </section>
@@ -44,7 +46,7 @@ import HomePhoto from "../assets/HomePhoto.webp";
 		z-index: 1;
 	}
 
-	section > div > .budget__button {
+	section > div > a > .budget__button {
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -62,7 +64,7 @@ import HomePhoto from "../assets/HomePhoto.webp";
 		transition: all 0.4s ease 0s;
 	}
 
-	section > div > .budget__button:hover {
+	section > div > a > .budget__button:hover {
 		background-color: var(--white-clean);
 		color: var(--blue-strong);
 		transition: all 0.4s ease 0s;
