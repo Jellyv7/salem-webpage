@@ -25,20 +25,22 @@ import { Link, Phone, Instagram, Whatsapp, Salem } from "@icons";
 					</div>
 				</a>
 			</div>
-			<div class="socialmedia__buttons">
-				<div>
+			<ul class="socialmedia__buttons">
+				<li>
 					<a href="tel:0414-4906-371" target="_blank"><Phone /></a>
-				</div>
-				<div>
+				</li>
+				<li>
 					<a
 						href="https://www.instagram.com/salemdistr/"
-						target="_blank"><Instagram /></a>
-				</div>
-				<div>
+						target="_blank"><Instagram />
+					</a>
+				</li>
+				<li>
 					<a href="https://wa.link/ikvb3p" target="_blank"
-						><Whatsapp /></a>
-				</div>
-			</div>
+						><Whatsapp />
+					</a>
+				</li>
+			</ul>
 		</div>
 		<div class="footer__decoration">
 			<div>
@@ -120,14 +122,18 @@ import { Link, Phone, Instagram, Whatsapp, Salem } from "@icons";
 		gap: 1.5em;
 	}
 
-	footer > div > div > .socialmedia__buttons div {
+	footer > div > div > .socialmedia__buttons li {
+		display: flex;
+	}
+
+	footer > div > div > .socialmedia__buttons li a {
 		width: 4em;
 		padding: 0.8em;
 		border-radius: 50%;
 		transition: all 0.4s ease 0s;
 	}
 
-	footer > div > div > .socialmedia__buttons div:hover {
+	footer > div > div > .socialmedia__buttons li > a:hover {
 		color: var(--blue-strong);
 		background-color: var(--white-clean);
 		transition: all 0.4s ease 0s;
