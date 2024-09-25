@@ -1,0 +1,9 @@
+export { default as Salem } from './SalemLogo.astro';
+export { default as SalemLetras } from './SalemLogoLetras.astro';
+export { default as Link } from './Link.astro';
+export { default as Instagram } from './Instagram.astro';
+export { default as Whatsapp } from './Whatsapp.astro';
+export { default as Phone } from './Phone.astro';
+export { default as Truck } from './Truck.astro';
+export { default as Award } from './Award.astro';
+export { default as Star } from './Star.astro';

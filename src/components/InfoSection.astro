@@ -1,0 +1,88 @@
+---
+import { Star, Truck, Award } from '@icons';
+---
+
+<section>
+	<div>
+		<h2>¿Quienes somos?</h2>
+		<p>
+			Somos tu aliado para tu negocio. Nos dedicamos a la distribución e
+			innovación en equipo de calidad y durabilidad, buscando garantizar
+			la satisfacción del cliente.
+		</p>
+	</div>
+	<div>
+		<div>
+			<Star />
+			<h3>Confianza</h3>
+			<p>Mantenemos la confianza de nuestros clientes.</p>
+		</div>
+		<div>
+			<Truck />
+			<h3>Transporte</h3>
+			<p>Más de 20 años de experiencia en transporte.</p>
+		</div>
+		<div>
+			<Award />
+			<h3>Calidad</h3>
+			<p>Somos proveedores de equipos de alta calidad.</p>
+		</div>
+	</div>
+</section>
+
+<style>
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 2em;
+	}
+
+	section > div:first-child {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 0.7rem;
+	}
+
+	section > div:first-child > h2 {
+		font-size: 1.6rem;
+		font-family: 'Swiss Medium';
+	}
+
+	section > div:first-child > p {
+		font-size: .9rem;
+		width: 50em;
+		text-align: center;
+	}
+
+	section > div:last-child {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 9em;
+	}
+
+	section > div:last-child > div {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 0.7em;
+		width: 15em;
+	}
+
+	section > div:last-child > div > h3 {
+		font-size: 1.4rem;
+		font-family: 'Swiss Medium';
+	}
+
+	section > div:last-child > div > p {
+		text-align: center;
+		font-size: 1rem;
+	}
+
+
+
+
+</style>

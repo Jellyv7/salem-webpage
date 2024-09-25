@@ -1,0 +1,99 @@
+---
+import Header from '@components/Header.astro'
+import Footer from '@components/Footer.astro'
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Inicio</title>
+	</head>
+	<Header />
+	<body>
+		<slot />
+	</body>
+	<Footer />
+</html>
+
+<style is:global>
+
+	* {
+		margin: 0;
+		padding: 0;
+		min-width: 0;
+		font: inherit;
+		user-select: none;
+		scroll-behavior: smooth;
+		overscroll-behavior: contain;
+		text-decoration: none;
+		-webkit-font-smoothing: antialiased;
+		-maz-osx-font-smoothing: grayscale;
+	}
+
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+
+	*:link, *:visited {
+		color: inherit;
+	}
+
+
+	body {
+		min-height: 100dvh;
+		font-family: 'Swiss Light', sans-serif;
+	}
+
+	ul,
+	ol {
+		list-style: none;
+	}
+
+	img,
+	picture,
+	svg,
+	video,
+	canvas {
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		text-wrap: balance;
+	}
+
+	p {
+		text-wrap: pretty;
+		letter-spacing: 1.2px;
+	}
+
+
+	:root {
+		--blue-strong: #262e35;
+		--blue-soft: #2e373f;
+		--blue-ultra-soft: #495764;
+		--white-clean: #f6f6f6;
+		--dark: #1d1d1b;
+		--blue-accent: #254366;
+	}
+
+	@font-face {
+		font-family: 'Greater Theory';
+		src: url('../assets/GreaterTheory.otf') format('opentype');
+	}
+
+	@font-face {
+		font-family: 'Swiss Light';
+		src: url('../assets/Swiss721BT-Light.ttf') format('truetype'); 
+	}
+
+	@font-face {
+		font-family: 'Swiss Medium';
+		src: url('../assets/Swiss721BT-Medium.ttf') format('truetype'); 
+	}
+</style>

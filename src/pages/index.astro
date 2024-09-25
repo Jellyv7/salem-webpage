@@ -1,0 +1,21 @@
+---
+import InfoSection from '@components/InfoSection.astro';
+import Layout from '../layouts/Layout.astro';
+import LogoCard from '@components/LogoCard.astro';
+---
+
+<Layout title="Inicio - Salem">
+	<main>
+		<LogoCard />
+		<InfoSection />
+	</main>
+</Layout>
+
+<style>
+	main {
+		display: flex;
+		flex-direction: column;
+		gap: 2em;
+	}
+	
+</style>

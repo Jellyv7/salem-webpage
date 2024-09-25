@@ -1,0 +1,57 @@
+---
+import { Salem } from "@icons";
+---
+
+<header>
+	<div>
+		<div>
+			<Salem />
+		</div>
+		<ul>
+			<li>
+				<a href="#">Galería</a>
+			</li>
+			<li>
+				<a href="#">Contacto</a>
+			</li>
+		</ul>
+	</div>
+</header>
+
+<style>
+	header > div {
+		display: flex;
+		padding: 1.5em 3em 1.5em 3em;
+		padding-bottom: 1.5em;
+		gap: 4em;
+		background-color: var(--blue-strong);
+	}
+
+	header > div > div {
+		width: 56px;
+	}
+
+	header > div > ul {
+		display: flex;
+		align-items: center;
+		gap: 4em;
+	}
+
+	header > div > ul > li {
+		padding: 1em;
+		transition: all 0.2s;
+		border-radius: 25px;
+		border: 1px transparent solid;
+	}
+
+	header > div > ul > li:hover {
+		background-color: var(--blue-soft);
+	}
+
+	header > div > ul > li > a {
+		font-size: 1.2rem;
+		color: var(--white-clean);
+		cursor: pointer;
+	}
+
+</style>
