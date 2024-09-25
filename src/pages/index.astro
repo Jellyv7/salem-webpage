@@ -2,12 +2,14 @@
 import InfoSection from '@components/InfoSection.astro';
 import Layout from '../layouts/Layout.astro';
 import LogoCard from '@components/LogoCard.astro';
+import InfoSection2 from '@components/InfoSection2.astro';
 ---
 
 <Layout title="Inicio - Salem">
 	<main>
 		<LogoCard />
 		<InfoSection />
+		<InfoSection2 />
 	</main>
 </Layout>
 
@@ -15,7 +17,7 @@ import LogoCard from '@components/LogoCard.astro';
 	main {
 		display: flex;
 		flex-direction: column;
-		gap: 2em;
+		gap: 5em;
 	}
 	
 </style>

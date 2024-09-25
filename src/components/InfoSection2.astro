@@ -1,0 +1,82 @@
+---
+import { Image } from "astro:assets";
+import HomePhoto from "../assets/HomePhoto.webp";
+---
+
+<section>
+	<div>
+		<div>
+			<Image src={HomePhoto} alt="" />
+		</div>
+		<div class="title">
+			<span>Somos tu</span>
+			<span>Distribuidora</span>
+			<span>de confianza</span>
+		</div>
+		<div class="budget__button">
+			<span> Presupuesto </span>
+		</div>
+		<div class="polygon"></div>
+	</div>
+</section>
+
+<style>
+	section > div {
+		display: flex;
+		flex-wrap: nowrap;
+		gap: 2em;
+		position: relative;
+	}
+
+	section > div > div > img {
+		width: 300px;
+	}
+
+	section > div > .title {
+		display: flex;
+		flex-direction: column;
+	}
+
+	section > div > .title > span {
+		text-transform: uppercase;
+		font-family: "Greater Theory";
+		font-size: 3rem;
+		text-wrap: wrap;
+		color: var(--dark);
+		z-index: 1;
+	}
+
+	section > div > .budget__button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		width: 13em;
+		height: 1em;
+		margin-right: 5em;
+		padding: 2em;
+		border: 5px var(--white-clean) solid;
+		font-size: 1.5rem;
+		z-index: 2;
+		color: var(--white-clean);
+		transition: all 0.4s ease 0s;
+	}
+
+	section > div > .budget__button:hover {
+		background-color: var(--white-clean);
+		color: var(--blue-strong);
+		transition: all 0.4s ease 0s;
+	}
+
+	section > div > .polygon {
+		position: absolute;
+		width: 78%;
+		height: 100%;
+		right: 0;
+		bottom: 0;
+		clip-path: polygon(100% 0, 0 100%, 100% 100%);
+		background-color: var(--blue-strong);
+	}
+</style>
