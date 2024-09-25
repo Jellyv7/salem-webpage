@@ -7,21 +7,37 @@ import { Link, Phone, Instagram, Whatsapp, Salem } from "@icons";
 		<div>
 			<div class="salem__logo">
 				<span>SALEM</span>
-				<p>Nos hacemos cargo de que tu negocio sea un total éxito en estética e innovación. Con nuestra asesoría, tendrás en la puerta de tu negocio tu equipo, más rápido de lo que esperas.</p>
+				<p>
+					Nos hacemos cargo de que tu negocio sea un total éxito en
+					estética e innovación. Con nuestra asesoría, tendrás en la
+					puerta de tu negocio tu equipo, más rápido de lo que
+					esperas.
+				</p>
 			</div>
 			<div class="mail__button">
 				<span>¡Envía un correo!</span>
-				<div>
-					<span>Escribenos</span>
+				<a href="https://wa.link/ug1zou" target="_blank">
 					<div>
-						<Link />
+						<span>Escribenos</span>
+						<div>
+							<Link />
+						</div>
 					</div>
-				</div>
+				</a>
 			</div>
 			<div class="socialmedia__buttons">
-				<div><Phone /></div>
-				<div><Instagram /></div>
-				<div><Whatsapp /></div>
+				<div>
+					<a href="tel:0414-4906-371" target="_blank"><Phone /></a>
+				</div>
+				<div>
+					<a
+						href="https://www.instagram.com/salemdistr/"
+						target="_blank"><Instagram /></a>
+				</div>
+				<div>
+					<a href="https://wa.link/ikvb3p" target="_blank"
+						><Whatsapp /></a>
+				</div>
 			</div>
 		</div>
 		<div class="footer__decoration">
@@ -53,7 +69,7 @@ import { Link, Phone, Instagram, Whatsapp, Salem } from "@icons";
 
 	footer > div > div > .salem__logo > span {
 		font-size: 4.5rem;
-		font-family: 'Greater Theory';
+		font-family: "Greater Theory";
 		color: var(--white-clean);
 	}
 
@@ -71,12 +87,12 @@ import { Link, Phone, Instagram, Whatsapp, Salem } from "@icons";
 		gap: 2.6em;
 	}
 
-	footer > div > div > .mail__button > span {
+	footer > div > div > .mail__button > a > span {
 		font-size: 1.6rem;
-		font-family: 'Swiss Medium';
+		font-family: "Swiss Medium";
 	}
 
-	footer > div > div > .mail__button > div {
+	footer > div > div > .mail__button > a > div {
 		display: flex;
 		justify-content: space-between;
 		padding: 1.6em 2.2em 1.6em 2.2em;
@@ -85,24 +101,23 @@ import { Link, Phone, Instagram, Whatsapp, Salem } from "@icons";
 		transition: all 0.4s ease 0s;
 	}
 
-	footer > div > div > .mail__button > div > span {
+	footer > div > div > .mail__button > a > div > span {
 		font-size: 1.5rem;
 	}
 
-	footer > div > div > .mail__button > div:hover {
+	footer > div > div > .mail__button > a > div:hover {
 		background-color: var(--white-clean);
 		color: var(--blue-strong);
 		transition: all 0.4s ease 0s;
 	}
 
-	footer > div > div > .mail__button > div > div {
+	footer > div > div > .mail__button > a > div > div {
 		width: 1.7em;
 	}
 
 	footer > div > div > .socialmedia__buttons {
 		display: flex;
 		gap: 1.5em;
-
 	}
 
 	footer > div > div > .socialmedia__buttons div {
@@ -130,11 +145,11 @@ import { Link, Phone, Instagram, Whatsapp, Salem } from "@icons";
 	}
 
 	footer > div > .footer__decoration::after {
-		content: '';
+		content: "";
 		position: absolute;
 		z-index: 999;
 		inset: 0;
-		background-image: url('../assets/SalemPatron.webp');
+		background-image: url("../assets/SalemPatron.webp");
 		pointer-events: none;
 		opacity: 0.7;
 	}
@@ -142,5 +157,4 @@ import { Link, Phone, Instagram, Whatsapp, Salem } from "@icons";
 	footer > div > .footer__decoration > div {
 		width: 10em;
 	}
-
 </style>
