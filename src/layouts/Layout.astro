@@ -25,7 +25,7 @@ const { title } = Astro.props;
 	const navbar = [...document.querySelectorAll('header > div > ul > li > a')];
 
 	for (let i = 0; i < navbar.length; i++) {
-		if (pageTitle === navbar[i].innerHTML) {
+		if (pageTitle === navbar[i].textContent) {
 			navbar[i].classList.add('active')
 		}
 	}
@@ -94,6 +94,7 @@ const { title } = Astro.props;
 		--white-clean: #f6f6f6;
 		--dark: #1d1d1b;
 		--blue-accent: #254366;
+		--blue-clean-accent: #2674cc;
 	}
 
 	@font-face {

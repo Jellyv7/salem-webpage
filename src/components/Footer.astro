@@ -46,6 +46,7 @@ import { Link, Phone, Instagram, Whatsapp, Salem } from "@icons";
 			<div>
 				<Salem />
 			</div>
+			<span>Webpage Developed with love by <a href="https://github.com/Jellyv7" target="_blank">Jelly.flac 💜</a></span>
 		</div>
 	</div>
 </footer>
@@ -164,5 +165,28 @@ import { Link, Phone, Instagram, Whatsapp, Salem } from "@icons";
 
 	footer > div > .footer__decoration > div {
 		width: 10em;
+	}
+
+	footer > div > .footer__decoration > span {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		color: var(--white-clean);
+		font-size: 0.7rem;
+		letter-spacing: 1px;
+		padding: 5px;
+		gap: 4px;
+	}
+
+	footer > div > .footer__decoration > span > a {
+		color: var(--blue-clean-accent);
+		cursor: pointer;
+	}
+
+	footer > div > .footer__decoration > span > a:hover {
+		text-decoration: underline;
 	}
 </style>
