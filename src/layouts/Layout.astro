@@ -12,7 +12,9 @@ import Footer from '@components/Footer.astro'
 	</head>
 	<Header />
 	<body>
-		<slot />
+		<main>
+			<slot />
+		</main>
 	</body>
 	<Footer />
 </html>
@@ -95,5 +97,13 @@ import Footer from '@components/Footer.astro'
 	@font-face {
 		font-family: 'Swiss Medium';
 		src: url('../assets/Swiss721BT-Medium.ttf') format('truetype'); 
+	}
+
+	main {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		gap: 5em;
+		z-index: 1000;
 	}
 </style>

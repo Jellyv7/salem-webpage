@@ -7,3 +7,4 @@ export { default as Phone } from './Phone.astro';
 export { default as Truck } from './Truck.astro';
 export { default as Award } from './Award.astro';
 export { default as Star } from './Star.astro';
+export { default as Mail } from './Mail.astro';

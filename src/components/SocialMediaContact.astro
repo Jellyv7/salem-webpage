@@ -1,0 +1,62 @@
+---
+import { Whatsapp, Instagram } from "@icons";
+---
+
+<section>
+	<h2>Encuentranos en las redes sociales</h2>
+	<ul>
+		<li>
+			<Whatsapp />
+		</li>
+		<li>
+			<Instagram />
+		</li>
+	</ul>
+</section>
+
+<style>
+	section {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		justify-content: center;
+		width: 100%;
+		gap: 2em;
+		margin-bottom: 3em;
+	}
+
+	h2 {
+		text-transform: uppercase;
+		font-family: "Greater Theory";
+		font-size: 3rem;
+		text-align: right;
+		margin-right: 1em;
+		width: 26em;
+		color: var(--dark);
+		z-index: 1000;
+	}
+
+	ul {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: fit-content;
+		padding: 1em 2em 1em 2em;
+		margin-right: 3em;
+		border-radius: 25px;
+		border: 3px var(--dark) solid;
+		gap: 4em;
+	}
+
+	ul > li {
+		width: 5em;
+		color: var(--dark);
+		transition: all 0.4s ease 0s;
+		cursor: pointer;
+	}
+
+	ul > li:hover {
+		color: var(--blue-accent);
+		transition: all 0.4s ease 0s;
+	}
+</style>

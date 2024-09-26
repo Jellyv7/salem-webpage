@@ -1,0 +1,81 @@
+---
+import { Phone, Mail } from "@icons";
+const contact = [
+	{
+		icon: Phone,
+		title: "Llamadas",
+		subtitle: "(+58) 4144906371",
+		href: 'tel:04144906371'
+	},
+	{
+		icon: Mail,
+		title: "Correo Electrónico",
+		subtitle: "SalemmDistribuidora@gmail.com",
+		href: 'mailto:SalemmDistribuidora@gmail.com'
+	}
+];
+---
+
+<section>
+	<ul>
+		{
+			contact.map(({ icon, title, subtitle, href }) => {
+				const Icon = icon;
+				return (
+					<li>
+						<div>{Icon ? <Icon /> : null}</div>
+						<div>
+							<h2>{title}</h2>
+							<a href={ href } target="_blank"><span>{subtitle}</span></a>
+						</div>
+					</li>
+				);
+			})
+		}
+	</ul>
+</section>
+
+<style>
+	section {
+		position: relative;
+	}
+
+	ul {
+		display: flex;
+		flex-direction: column;
+		margin-left: 2.5em;
+		gap: 2em;
+	}
+
+	ul > li {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 1.5em;
+		z-index: 1000;
+	}
+
+	ul > li > div {
+		width: 3em;
+		color: var(--dark);
+	}
+
+	ul > li > div:last-child {
+		display: flex;
+		flex-direction: column;
+		min-width: fit-content;
+	}
+
+	ul > li > div:last-child > h2 {
+		font-family: 'Greater Theory';
+		font-size: 3rem;
+		color: var(--dark);
+	}
+
+	ul > li > div:last-child > a {
+		font-family: system-ui;
+		font-size: 1.5rem;
+		color: var(--blue-accent);
+		cursor: pointer;
+	}
+</style>
