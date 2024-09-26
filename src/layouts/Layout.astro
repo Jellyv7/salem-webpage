@@ -25,8 +25,6 @@ const { title } = Astro.props;
 	const navbar = [...document.querySelectorAll('header > div > ul > li > a')];
 
 	for (let i = 0; i < navbar.length; i++) {
-		console.log(navbar[i].innerHTML, 'ELEMENTO ACTUAL');
-		console.log(pageTitle, 'TITULO ACTUAL')
 		if (pageTitle === navbar[i].innerHTML) {
 			navbar[i].classList.add('active')
 		}
