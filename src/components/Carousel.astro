@@ -27,13 +27,20 @@ const galleryImages = [
 ---
 
 <div class="swiper">
-	<div class="swiper-wrapper">
+	<div class="swiper-wrapper" id="swiper-slider">
 		{
 			galleryImages.map((elem) => {
 				return (
-					<div class="swiper-slide">
+					<a
+						class="swiper-slide"
+						href={elem.src}
+						data-pswp-width={elem.width}
+						data-pswp-height={elem.height}
+						target="_blank"
+						data-cropped="true"
+					>
 						<Image src={elem} alt="ok" />
-					</div>
+					</a>
 				);
 			})
 		}
@@ -56,16 +63,24 @@ const galleryImages = [
 			draggable: true,
 		},
 	});
+
+	import PhotoSwipeLightbox from "photoswipe/lightbox";
+	import "photoswipe/style.css";
+
+	const lightbox = new PhotoSwipeLightbox({
+		gallery: "#swiper-slider",
+		children: "a",
+		pswpModule: () => import("photoswipe"),
+	});
+	lightbox.init();
 </script>
 
 <style>
-
 	.swiper-slide {
 		height: 300px;
 		overflow: hidden;
-		margin-top: 2em;
-		margin-bottom: 2em;
 		margin-right: unset;
+		margin-block: 3em;
 		width: 70%;
 	}
 
