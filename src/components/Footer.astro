@@ -7,12 +7,26 @@ import { Link, Phone, Instagram, Whatsapp, Salem } from "@icons";
 		<div>
 			<div class="salem__logo">
 				<span>SALEM</span>
+				<div class="salem__icon"><Salem /></div>
 				<p>
 					Nos hacemos cargo de que tu negocio sea un total éxito en
 					estética e innovación. Con nuestra asesoría, tendrás en la
 					puerta de tu negocio tu equipo, más rápido de lo que
 					esperas.
 				</p>
+			</div>
+			<div class="menu__mobile">
+				<ul>
+					<li>
+						<a><span>Inicio</span></a>
+					</li>
+					<li>
+						<a><span>Galeria</span></a>
+					</li>
+					<li>
+						<a><span>Contacto</span></a>
+					</li>
+				</ul>
 			</div>
 			<div class="mail__button">
 				<span>¡Envía un correo!</span>
@@ -32,7 +46,8 @@ import { Link, Phone, Instagram, Whatsapp, Salem } from "@icons";
 				<li>
 					<a
 						href="https://www.instagram.com/salemdistr/"
-						target="_blank"><Instagram />
+						target="_blank"
+						><Instagram />
 					</a>
 				</li>
 				<li>
@@ -46,7 +61,13 @@ import { Link, Phone, Instagram, Whatsapp, Salem } from "@icons";
 			<div>
 				<Salem />
 			</div>
-			<span>Webpage Developed with love by <a href="https://github.com/Jellyv7" target="_blank">Jelly.flac </a>💜</span>
+			<span
+				>Web desarrollada por <a
+					href="https://github.com/Jellyv7"
+					target="_blank"
+					>Jelly.flac
+				</a>💜</span
+			>
 		</div>
 	</div>
 </footer>
@@ -75,13 +96,22 @@ import { Link, Phone, Instagram, Whatsapp, Salem } from "@icons";
 	footer > div > div > .salem__logo > span {
 		font-size: 4.5rem;
 		font-family: "Greater Theory";
+		letter-spacing: 2px;
 		color: var(--white-clean);
+	}
+
+	footer > div > div > .menu__mobile {
+		display: none;
 	}
 
 	footer > div > div > .salem__logo > p {
 		font-size: 1rem;
 		color: var(--white-clean);
 		width: 30em;
+	}
+
+	footer > div > div > .salem__logo > .salem__icon {
+		display: none;
 	}
 
 	footer > div > div > .mail__button {
@@ -188,5 +218,42 @@ import { Link, Phone, Instagram, Whatsapp, Salem } from "@icons";
 
 	footer > div > .footer__decoration > span > a:hover {
 		text-decoration: underline;
+	}
+
+	@media (width <= 700px) {
+		footer > div > div {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		footer > div > div > .salem__logo > span,
+		footer > div > div > .salem__logo > p {
+			display: none;
+		}
+
+		footer > div > div > .salem__logo > .salem__icon {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 5em;
+		}
+
+		footer > div > div > .menu__mobile {
+			display: flex;
+		}
+
+		footer > div > div > .menu__mobile > ul {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			gap: 2em;
+		}
+
+
+		footer > div > div > .mail__button {
+			display: none;
+		}
 	}
 </style>

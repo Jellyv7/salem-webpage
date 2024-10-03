@@ -22,9 +22,9 @@ import { Salem } from "@icons";
 	header > div {
 		display: flex;
 		padding: 1.5em 3em 1.5em 3em;
-		padding-bottom: 1.5em;
 		gap: 4em;
 		background-color: var(--blue-strong);
+		width: 100%;
 	}
 
 	header > div > div {
@@ -67,6 +67,38 @@ import { Salem } from "@icons";
 		header > div > ul > li > a {
 			font-size: 1.6rem;
 		}
+	}
+
+	@media (width <= 700px) {
+		header {
+			margin: 0.8em;
+		}
+
+		header > div {
+			justify-content: space-between;
+			border-radius: 50px;
+			padding: 0.6em 1.2em 0.6em 1.2em;
+			gap: unset;
+			width: 100%;
+		}
+
+		header > div > ul {
+			gap: 1em;
+		}
+
+		header > div > div {
+			width: 40px;
+		}
+
+		header > div > ul > li > a {
+			font-size: 1.1rem;
+			padding: 0.5em;
+		}
+
+		header > div > ul > li > a.active {
+		border: 1px var(--white-clean) solid;
+		pointer-events: none;
+	}
 	}
 
 </style>

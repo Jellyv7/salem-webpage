@@ -1,5 +1,5 @@
 ---
-import { Star, Truck, Award } from '@icons';
+import { Star, Truck, Award } from "@icons";
 ---
 
 <section>
@@ -14,18 +14,24 @@ import { Star, Truck, Award } from '@icons';
 	<div>
 		<div>
 			<Star />
-			<h3>Confianza</h3>
-			<p>Mantenemos la confianza de nuestros clientes.</p>
+			<div>
+				<h3>Confianza</h3>
+				<p>Mantenemos la confianza de nuestros clientes.</p>
+			</div>
 		</div>
 		<div>
 			<Truck />
-			<h3>Transporte</h3>
-			<p>Más de 20 años de experiencia en transporte.</p>
+			<div>
+				<h3>Transporte</h3>
+				<p>Más de 20 años de experiencia en transporte.</p>
+			</div>
 		</div>
 		<div>
 			<Award />
-			<h3>Calidad</h3>
-			<p>Somos proveedores de equipos de alta calidad.</p>
+			<div>
+				<h3>Calidad</h3>
+				<p>Somos proveedores de equipos de alta calidad.</p>
+			</div>
 		</div>
 	</div>
 </section>
@@ -34,6 +40,7 @@ import { Star, Truck, Award } from '@icons';
 	section {
 		display: flex;
 		flex-direction: column;
+		background-color: var(--white-clean);
 		gap: 2em;
 	}
 
@@ -46,12 +53,13 @@ import { Star, Truck, Award } from '@icons';
 	}
 
 	section > div:first-child > h2 {
+		margin-top: 1em;
 		font-size: 1.6rem;
-		font-family: 'Swiss Medium';
+		font-family: "Swiss Medium";
 	}
 
 	section > div:first-child > p {
-		font-size: .9rem;
+		font-size: 0.9rem;
 		width: 50em;
 		text-align: center;
 	}
@@ -72,12 +80,20 @@ import { Star, Truck, Award } from '@icons';
 		width: 15em;
 	}
 
-	section > div:last-child > div > h3 {
-		font-size: 1.4rem;
-		font-family: 'Swiss Medium';
+	section > div:last-child > div > div {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: 1em;
 	}
 
-	section > div:last-child > div > p {
+	section > div:last-child > div > div > h3 {
+		font-size: 1.4rem;
+		font-family: "Swiss Medium";
+	}
+
+	section > div:last-child > div > div > p {
 		text-align: center;
 		font-size: 1rem;
 	}
@@ -99,7 +115,42 @@ import { Star, Truck, Award } from '@icons';
 			font-size: 1.5rem;
 		}
 
+		section > div:last-child > div {
+			width: 20em;
+		}
 	}
 
+	@media (width <= 700px) {
+		section > div:first-child > h2 {
+			margin-top: 1em;
+			font-size: 1.2rem;
+		}
 
+		section > div:first-child > p {
+			font-size: 0.8rem;
+			width: 25em;
+			text-align: center;
+		}
+
+		section > div:last-child {
+			flex-direction: column;
+			gap: 2.5em;
+		}
+
+		section > div:last-child > div {
+			width: 18em;
+		}
+
+		section > div:last-child > div:nth-child(even) {
+			flex-direction: row;
+		}
+
+		section > div:last-child > div:nth-child(odd) {
+			flex-direction: row-reverse;
+		}
+
+		section > div:last-child > div > div > p {
+			font-size: 0.9rem;
+		}
+	}
 </style>

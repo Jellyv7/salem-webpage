@@ -19,16 +19,6 @@ const { cardTitle, subtitle } = Astro.props;
 		padding-bottom: 2em;
 	}
 
-	.salem__banner::after {
-		content: '';
-		position: absolute;
-		z-index: 999;
-		inset: 0;
-		background-image: url('../assets/SalemPatron.webp');
-		pointer-events: none;
-		opacity: 0.5;
-	}
-
 	.salem__banner > div > h1 {
 		font-family: 'Greater Theory';
 		font-size: 6.5rem;
@@ -43,5 +33,21 @@ const { cardTitle, subtitle } = Astro.props;
 		text-transform: uppercase;
 		font-family: 'Swiss Light';
 		letter-spacing: 2px;
+	}
+
+	@media (width <= 700px) {
+		.salem__banner {
+			padding-top: 1em;
+			padding-bottom: unset;
+		}
+
+		.salem__banner > div > h1 {
+			font-size: 3rem;
+		}
+
+		.salem__banner > div > h3 {
+			font-size: 0.8rem;
+		}
+
 	}
 </style>

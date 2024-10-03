@@ -60,6 +60,17 @@ const { title } = Astro.props;
 	body {
 		min-height: 100dvh;
 		font-family: 'Swiss Light', sans-serif;
+		background-color: var(--white-clean);
+	}
+
+	body::after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		inset: 0;
+		background-image: url('../assets/SalemPatron.webp');
+		pointer-events: none;
+		opacity: 0.5;
 	}
 
 	ul,
@@ -119,4 +130,5 @@ const { title } = Astro.props;
 		gap: 5em;
 		z-index: 1000;
 	}
+
 </style>
