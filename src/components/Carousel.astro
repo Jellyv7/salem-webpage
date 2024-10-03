@@ -11,7 +11,7 @@ import {
 	gallery8,
 	gallery9,
 } from "../assets/index.js";
-import "swiper/css";
+import 'swiper/css/bundle';
 
 const galleryImages = [
 	gallery1,
@@ -43,17 +43,16 @@ const galleryImages = [
 
 <script>
 	import Swiper from "swiper";
-	import { Navigation } from "swiper/modules";
+	import { Navigation, Scrollbar } from "swiper/modules";
 	import "swiper/css/navigation";
 	const swiper = new Swiper(".swiper", {
-		modules: [Navigation],
+		modules: [Navigation, Scrollbar],
 		loop: true,
 		slidesPerView: "auto",
 		spaceBetween: 20,
 		centeredSlides: true,
 		scrollbar: {
-			el: ".swiper-scrollbar",
-			draggable: true,
+			el: ".swiper-scrollbar"
 		},
 	});
 </script>
@@ -84,5 +83,9 @@ const galleryImages = [
 		object-fit: cover;
 		border-radius: 5px;
 		position: relative;
+	}
+
+	.swiper-scrollbar {
+		margin-bottom: 1em;
 	}
 </style>
