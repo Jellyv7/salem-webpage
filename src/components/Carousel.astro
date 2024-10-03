@@ -72,8 +72,6 @@ const galleryImages = [
 		'<svg aria-hidden="true" class="pswp__icn" viewBox="0 0 50 30" width="50" height="30"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6" /></svg>';
 	const arrowNextString =
 		'<svg aria-hidden="true" class="pswp__icn" viewBox="0 0 50 30" width="50" height="30"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>';
-	const zoomString =
-		'<svg aria-hidden="true" class="pswp__icn" viewBox="0 0 50 30" width="50" height="30"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M7 10l6 0" /><path d="M10 7l0 6" /><path d="M21 21l-6 -6" /></svg>';
 
 	const lightbox = new PhotoSwipeLightbox({
 		gallery: "#swiper-slider",
@@ -82,7 +80,7 @@ const galleryImages = [
 		closeSVG: closeSVGString,
 		arrowNextSVG: arrowNextString,
 		arrowPrevSVG: arrowPrevString,
-		zoomSVG: zoomString,
+		zoomSVG: '',
 		mainClass: "pswp--custom-icon-colors",
 	});
 	lightbox.init();
