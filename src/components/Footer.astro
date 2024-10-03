@@ -39,23 +39,33 @@ import { Link, Phone, Instagram, Whatsapp, Salem } from "@icons";
 					</div>
 				</a>
 			</div>
-			<ul class="socialmedia__buttons">
-				<li>
-					<a href="tel:0414-4906-371" target="_blank"><Phone /></a>
-				</li>
-				<li>
-					<a
-						href="https://www.instagram.com/salemdistr/"
-						target="_blank"
-						><Instagram />
-					</a>
-				</li>
-				<li>
-					<a href="https://wa.link/ikvb3p" target="_blank"
-						><Whatsapp />
-					</a>
-				</li>
-			</ul>
+			<div class="container__menu">
+				<ul class="socialmedia__buttons">
+					<li>
+						<a href="tel:0414-4906-371" target="_blank"><Phone /></a
+						>
+					</li>
+					<li>
+						<a
+							href="https://www.instagram.com/salemdistr/"
+							target="_blank"
+							><Instagram />
+						</a>
+					</li>
+					<li>
+						<a href="https://wa.link/ikvb3p" target="_blank"
+							><Whatsapp />
+						</a>
+					</li>
+				</ul>
+			</div>
+			<span
+				>Web desarrollada por <a
+					href="https://github.com/Jellyv7"
+					target="_blank"
+					>Jelly.flac
+				</a>💜</span
+			>
 		</div>
 		<div class="footer__decoration">
 			<div>
@@ -150,23 +160,27 @@ import { Link, Phone, Instagram, Whatsapp, Salem } from "@icons";
 		width: 1.7em;
 	}
 
-	footer > div > div > .socialmedia__buttons {
+	footer > div > div > .container__menu {
+		position: relative;
+	}
+
+	footer > div > div > .container__menu > .socialmedia__buttons {
 		display: flex;
 		gap: 1.5em;
 	}
 
-	footer > div > div > .socialmedia__buttons li {
+	footer > div > div > .container__menu > .socialmedia__buttons li {
 		display: flex;
 	}
 
-	footer > div > div > .socialmedia__buttons li a {
+	footer > div > div > .container__menu > .socialmedia__buttons li a {
 		width: 4em;
 		padding: 0.8em;
 		border-radius: 50%;
 		transition: all 0.4s ease 0s;
 	}
 
-	footer > div > div > .socialmedia__buttons li a:hover {
+	footer > div > div > .container__menu > .socialmedia__buttons li a:hover {
 		color: var(--blue-strong);
 		background-color: var(--white-clean);
 		transition: all 0.4s ease 0s;
@@ -223,8 +237,9 @@ import { Link, Phone, Instagram, Whatsapp, Salem } from "@icons";
 	@media (width <= 700px) {
 		footer > div > div {
 			flex-direction: column;
-			justify-content: center;
+			justify-content: space-between;
 			align-items: center;
+			gap: 4em;
 		}
 
 		footer > div > div > .salem__logo > span,
@@ -236,7 +251,7 @@ import { Link, Phone, Instagram, Whatsapp, Salem } from "@icons";
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			width: 5em;
+			width: 4em;
 		}
 
 		footer > div > div > .menu__mobile {
@@ -248,12 +263,42 @@ import { Link, Phone, Instagram, Whatsapp, Salem } from "@icons";
 			align-items: center;
 			justify-content: center;
 			flex-direction: column;
-			gap: 2em;
+			font-family: "Greater Theory";
+			font-size: 1.3rem;
+			gap: 2.5em;
 		}
-
 
 		footer > div > div > .mail__button {
 			display: none;
+		}
+
+		footer > div > .footer__decoration {
+			display: none;
+		}
+
+		footer > div > div > .container__menu > .socialmedia__buttons li a {
+			width: 3.7em;
+		}
+
+		footer > div > div > .container__menu::after {
+			content: "";
+			position: absolute;
+			bottom: -15%;
+			left: -20%;
+			right: 50%;
+			width: 20rem;
+			height: 1px;
+			border-top: 1px solid var(--white-clean);
+		}
+
+		footer > div > div > span {
+			opacity: 0.8;
+			font-size: 0.8rem;
+		}
+
+		footer > div > div > span > a {
+			color: var(--blue-clean-accent);
+			font-size: 0.8rem;
 		}
 	}
 </style>
