@@ -11,7 +11,7 @@ import {
 	gallery8,
 	gallery9,
 } from "../assets/index.js";
-import 'swiper/css/bundle';
+import "swiper/css/bundle";
 
 const galleryImages = [
 	gallery1,
@@ -52,29 +52,31 @@ const galleryImages = [
 		spaceBetween: 20,
 		centeredSlides: true,
 		scrollbar: {
-			el: ".swiper-scrollbar"
+			el: ".swiper-scrollbar",
+			draggable: true,
 		},
 	});
 </script>
 
 <style>
+
 	.swiper-slide {
-		height: 320px;
+		height: 180px;
 		overflow: hidden;
 		margin-top: 2em;
 		margin-bottom: 2em;
-		width: 80%;
+		margin-right: unset;
+		width: 48%;
 	}
 
-	.swiper::before {
-		content: '';
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		z-index: 999;
-		pointer-events: none;
-		background: rgb(246,246,246);
-		background: linear-gradient(90deg, rgba(246,246,246,0) 95%, rgba(246,246,246,1) 100%);
+	.swiper {
+		background: rgb(246, 246, 246);
+		background: linear-gradient(
+			90deg,
+			rgba(246, 246, 246, 0) 95%,
+			rgba(246, 246, 246, 1) 100%
+		);
+		mask-image: linear-gradient(to left, transparent, #000000 20%);
 	}
 
 	.swiper-slide > img {
