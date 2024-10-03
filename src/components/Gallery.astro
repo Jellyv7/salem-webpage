@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets';
+import Carousel from '@components/Carousel.astro';
 import { gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, gallery9 } from '../assets/index.js';
 
 const galleryImages = [
@@ -15,7 +16,7 @@ const galleryImages = [
 ]
 ---
 
-<section>
+<section class="web__version">
 	<ul>
 		{
 			galleryImages.map(elem => {
@@ -29,7 +30,19 @@ const galleryImages = [
 	</ul>
 </section>
 
+<section class="mobile__version">
+	<Carousel />
+</section>
+
 <style>
+	section {
+		background-color: var(--white-clean);
+	}
+
+	section.mobile__version {
+		display: none;
+	}
+
 	ul {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
@@ -55,6 +68,20 @@ const galleryImages = [
 	li > img:hover {
 		scale: 1.1;
 		filter: unset;
+	}
+
+	@media (width <= 700px) {
+		main {
+			gap: unset;
+		}
+
+		section.web__version {
+			display: none;
+		}
+
+		section.mobile__version {
+			display: block;
+		}
 	}
 
 </style>
