@@ -66,16 +66,34 @@ const galleryImages = [
 
 	import PhotoSwipeLightbox from "photoswipe/lightbox";
 	import "photoswipe/style.css";
+	const closeSVGString =
+		'<svg aria-hidden="true" class="pswp__icn" viewBox="0 0 50 30" width="50" height="30"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>';
+	const arrowPrevString =
+		'<svg aria-hidden="true" class="pswp__icn" viewBox="0 0 50 30" width="50" height="30"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6" /></svg>';
+	const arrowNextString =
+		'<svg aria-hidden="true" class="pswp__icn" viewBox="0 0 50 30" width="50" height="30"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>';
+	const zoomString =
+		'<svg aria-hidden="true" class="pswp__icn" viewBox="0 0 50 30" width="50" height="30"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M7 10l6 0" /><path d="M10 7l0 6" /><path d="M21 21l-6 -6" /></svg>';
 
 	const lightbox = new PhotoSwipeLightbox({
 		gallery: "#swiper-slider",
 		children: "a",
 		pswpModule: () => import("photoswipe"),
+		closeSVG: closeSVGString,
+		arrowNextSVG: arrowNextString,
+		arrowPrevSVG: arrowPrevString,
+		zoomSVG: zoomString,
+		mainClass: "pswp--custom-icon-colors",
 	});
 	lightbox.init();
 </script>
 
 <style>
+	.pswp--custom-icon-colors {
+		--pswp-icon-color: red;
+		--pswp-icon-color-secondary: red;
+	}
+
 	.swiper-slide {
 		height: 300px;
 		overflow: hidden;
@@ -104,5 +122,14 @@ const galleryImages = [
 
 	.swiper-scrollbar {
 		margin-bottom: 1em;
+	}
+
+	.pswp__icn-shadow {
+		display: none;
+	}
+
+	.pswp__button > svg {
+		color: var(--white-clean);
+		fill: none;
 	}
 </style>
