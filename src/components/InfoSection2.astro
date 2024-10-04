@@ -8,15 +8,11 @@ import HomePhoto from "../assets/HomePhoto.webp";
 		<div>
 			<Image src={HomePhoto} alt="" />
 		</div>
-		<div class="title">
-			<span>Somos tu distribuidora de confianza</span>
+		<div>
+			<h2>Somos tu distribuidora de confianza</h2>
+			<a href="https://wa.link/f7e7l4" target="_blank">Presupuesto</a>
+			<div class="polygon"></div>
 		</div>
-		<a href="https://wa.link/f7e7l4" target="_blank">
-			<div class="budget__button">
-				<span> Presupuesto </span>
-			</div>
-		</a>
-		<div class="polygon"></div>
 	</div>
 </section>
 
@@ -24,22 +20,22 @@ import HomePhoto from "../assets/HomePhoto.webp";
 	section > div {
 		display: flex;
 		flex-wrap: nowrap;
-		gap: 2em;
 		position: relative;
 		background-color: var(--white-clean);
 	}
 
+	section > div > div:last-child {
+		width: 100%;
+		position: relative;
+	}
+
 	section > div > div > img {
-		width: 300px;
+		width: 400px;
 	}
 
-	section > div > .title {
-		display: flex;
-		flex-direction: column;
-	}
-
-	section > div > .title > span {
+	section > div > div > h2 {
 		max-width: 10em;
+		margin-left: 0.5em;
 		text-transform: uppercase;
 		font-family: "Greater Theory";
 		font-size: clamp(1.4rem, 3.5vw, 3rem);
@@ -47,7 +43,7 @@ import HomePhoto from "../assets/HomePhoto.webp";
 		z-index: 1;
 	}
 
-	section > div > a > .budget__button {
+	section > div > div > a  {
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -65,15 +61,15 @@ import HomePhoto from "../assets/HomePhoto.webp";
 		transition: all 0.4s ease 0s;
 	}
 
-	section > div > a > .budget__button:hover {
+	section > div > div > a:hover {
 		background-color: var(--white-clean);
 		color: var(--blue-strong);
 		transition: all 0.4s ease 0s;
 	}
 
-	section > div > .polygon {
+	section > div > div > .polygon {
 		position: absolute;
-		width: 78%;
+		width: 100%;
 		height: 100%;
 		right: 0;
 		bottom: -1px;
@@ -101,7 +97,6 @@ import HomePhoto from "../assets/HomePhoto.webp";
 	}
 
 	@media (width <= 700px) {
-
 		section {
 			background-color: transparent;
 		}
@@ -124,6 +119,10 @@ import HomePhoto from "../assets/HomePhoto.webp";
 		section > div > .title > span {
 			font-size: 2rem;
 			text-align: center;
+		}
+
+		section > div > div > img {
+			width: 300px;
 		}
 	}
 </style>
