@@ -21,7 +21,7 @@ const { cardTitle, subtitle } = Astro.props;
 
 	.salem__banner > div > h1 {
 		font-family: 'Greater Theory';
-		font-size: 6.5rem;
+		font-size: clamp(3rem, 7vw, 6.5rem);
 		text-transform: uppercase;
 		text-align: center;
 		color: var(--dark);
@@ -29,7 +29,7 @@ const { cardTitle, subtitle } = Astro.props;
 
 	.salem__banner > div > h3 {
 		text-align: center;
-		font-size: 1.2rem;
+		font-size: clamp(0.8rem, 2vw, 1.5rem);
 		text-transform: uppercase;
 		font-family: 'Swiss Light';
 		letter-spacing: 2px;
@@ -40,14 +40,5 @@ const { cardTitle, subtitle } = Astro.props;
 			padding-top: 1em;
 			padding-bottom: unset;
 		}
-
-		.salem__banner > div > h1 {
-			font-size: 3rem;
-		}
-
-		.salem__banner > div > h3 {
-			font-size: 0.8rem;
-		}
-
 	}
 </style>

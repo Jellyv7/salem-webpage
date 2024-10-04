@@ -85,13 +85,13 @@ const contact = [
 
 	ul > li > div:last-child > h2 {
 		font-family: "Greater Theory";
-		font-size: 3rem;
+		font-size: clamp(1rem, 3vw, 3rem);
 		color: var(--dark);
 	}
 
 	ul > li > div:last-child > a {
 		font-family: system-ui;
-		font-size: 1.5rem;
+		font-size: clamp(0.8rem, 2.5vw, 1.5rem);
 		color: var(--blue-accent);
 		cursor: pointer;
 	}
@@ -107,16 +107,12 @@ const contact = [
 			display: flex;
 		}
 
+		ul {
+			margin-left: 1em;
+		}
+
 		ul > li > div {
-			width: 2em;
-		}
-
-		ul > li > div:last-child > h2 {
-			font-size: 1.5rem;
-		}
-
-		ul > li > div:last-child > a {
-			font-size: 1rem;
+			width: 1.9em;
 		}
 	}
 </style>
