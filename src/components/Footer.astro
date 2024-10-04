@@ -59,12 +59,12 @@ import { Link, Phone, Instagram, Whatsapp, Salem } from "@icons";
 					</li>
 				</ul>
 			</div>
-			<span
+			<span class="water__mark"
 				>Web desarrollada por <a
 					href="https://github.com/Jellyv7"
 					target="_blank"
 					>Jelly.flac
-				</a>💜</span
+				</a>💜</spancl
 			>
 		</div>
 		<div class="footer__decoration">
@@ -234,7 +234,15 @@ import { Link, Phone, Instagram, Whatsapp, Salem } from "@icons";
 		text-decoration: underline;
 	}
 
+	.water__mark {
+		display: none;
+	}
+
 	@media (width <= 700px) {
+		.water__mark {
+			display: block;
+		}	
+
 		footer > div > div {
 			flex-direction: column;
 			justify-content: space-between;
@@ -265,6 +273,7 @@ import { Link, Phone, Instagram, Whatsapp, Salem } from "@icons";
 			flex-direction: column;
 			font-family: "Greater Theory";
 			font-size: 1.3rem;
+			letter-spacing: 2px;
 			gap: 2.5em;
 		}
 

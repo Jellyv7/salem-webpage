@@ -1,18 +1,30 @@
 ---
-import { Phone, Mail } from "@icons";
+import { Phone, Mail, Whatsapp, Instagram } from "@icons";
 const contact = [
 	{
 		icon: Phone,
 		title: "Llamadas",
 		subtitle: "(+58) 4144906371",
-		href: 'tel:04144906371'
+		href: "tel:04144906371",
 	},
 	{
 		icon: Mail,
 		title: "Correo Electrónico",
 		subtitle: "salemmdistribuidora@gmail.com",
-		href: 'mailto:salemmdistribuidora@gmail.com'
-	}
+		href: "mailto:salemmdistribuidora@gmail.com",
+	},
+	{
+		icon: Whatsapp,
+		title: "WhatsApp",
+		subtitle: "(+58) 4144906371",
+		href: "https://wa.link/ikvb3p",
+	},
+	{
+		icon: Instagram,
+		title: "Instagram",
+		subtitle: "@salemdistr",
+		href: "https://www.instagram.com/salemdistr/",
+	},
 ];
 ---
 
@@ -22,11 +34,13 @@ const contact = [
 			contact.map(({ icon, title, subtitle, href }) => {
 				const Icon = icon;
 				return (
-					<li>
+					<li class={title.toLowerCase()}>
 						<div>{Icon ? <Icon /> : null}</div>
 						<div>
 							<h2>{title}</h2>
-							<a href={ href } target="_blank"><span>{subtitle}</span></a>
+							<a href={href} target="_blank">
+								<span>{subtitle}</span>
+							</a>
 						</div>
 					</li>
 				);
@@ -38,6 +52,9 @@ const contact = [
 <style>
 	section {
 		position: relative;
+		margin-bottom: 3em;
+		background-color: var(--white-clean);
+		padding: 1em;
 	}
 
 	ul {
@@ -67,7 +84,7 @@ const contact = [
 	}
 
 	ul > li > div:last-child > h2 {
-		font-family: 'Greater Theory';
+		font-family: "Greater Theory";
 		font-size: 3rem;
 		color: var(--dark);
 	}
@@ -77,5 +94,29 @@ const contact = [
 		font-size: 1.5rem;
 		color: var(--blue-accent);
 		cursor: pointer;
+	}
+
+	ul > .instagram,
+	ul > .whatsapp {
+		display: none;
+	}
+
+	@media (width <= 700px) {
+		ul > .instagram,
+		ul > .whatsapp {
+			display: flex;
+		}
+
+		ul > li > div {
+			width: 2em;
+		}
+
+		ul > li > div:last-child > h2 {
+			font-size: 1.5rem;
+		}
+
+		ul > li > div:last-child > a {
+			font-size: 1rem;
+		}
 	}
 </style>
