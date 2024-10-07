@@ -9,7 +9,22 @@ const { title } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>{ title }</title>
+
+		<meta name="twitter:card" content="" />
+		<meta name="twitter:title" content={ title } />
+		<meta name="twitter:description" content='Salem, tu distribuidora de vitrinas más confiable y segura' />
+		<meta name="twitter:image" content="https://salem-distribuidora.vercel.app/og.webp" />
+
+		<meta name="og:image" content="https://salem-distribuidora.vercel.app/og.webp" />
+		<meta name="og:title" content={ title } />
+		<meta name="og:description" content='Salem, tu distribuidora de vitrinas más confiable y segura`' />
+		<meta name="og:url" content="https://salem-distribuidora.vercel.app/" />
+		<meta name="og:site_name" content={ title } />
+		<meta name="og:type" content="website" />
+		<meta name="og:locale" content="es_VE" />
+		<meta name='og:country-name' content='Venezuela'>
 	</head>
 	<Header />
 	<body>
